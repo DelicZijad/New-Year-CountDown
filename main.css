@@ -1,0 +1,74 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Courier New', Courier, monospace;
+    display: grid;
+    place-content: center;
+    height: 100vh;
+    transition: all 250ms;
+}
+#display{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+h1,h2,h3{
+    text-align: center;
+    text-transform: capitalize;
+}
+#title{
+    font-size: 4rem;
+    margin-bottom: 5rem;
+    color: white;
+}
+.count{
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    transition: all 250ms;
+}
+.card{
+padding: 1.5rem;
+background-color: black;
+color: white;
+width: 8rem;
+border-radius: 10px;
+}
+
+@media screen  and (max-width:420px){
+    #title{
+        font-size: 2rem;
+    }
+    .card{
+        width: 5rem;
+        padding: 0.8rem;
+    }
+    .count{
+        font-size: 1.25rem;
+    }
+    .desc{
+        font-size: 0.75rem;
+    }
+    #display{
+        justify-content:center;
+       column-gap: 0.5rem;
+       row-gap: 1.5rem;
+    }
+}
+@media screen and (max-width:1024px){
+    #display{
+        justify-content:space-around;
+    }
+    .card{
+        width: 7rem;
+        padding: 1.25rem;
+    }
+    .count{
+        font-size: 1.75rem;
+    }
+    .desc{
+        font-size: 1rem;
+    }
+}
